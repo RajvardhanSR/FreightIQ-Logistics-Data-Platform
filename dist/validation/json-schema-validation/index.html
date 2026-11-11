@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrier Webhook JSON Schema Validation (Draft-07 & 2020-12) | FreightIQ</title>
+  <meta name="description" content="Production-ready JSON Schema specifications for freight webhooks. Enforce mandatory keys, ISO-8601 timestamps, regex patterns, and numeric ranges.">
+  <link rel="canonical" href="https://rajvardhansinghrathore.in/validation/json-schema-validation">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://rajvardhansinghrathore.in/validation/json-schema-validation">
+  <meta property="og:title" content="Carrier Webhook JSON Schema Validation (Draft-07 & 2020-12) | FreightIQ">
+  <meta property="og:description" content="Production-ready JSON Schema specifications for freight webhooks. Enforce mandatory keys, ISO-8601 timestamps, regex patterns, and numeric ranges.">
+  <meta property="og:site_name" content="FreightIQ">
+  <meta property="og:image" content="https://rajvardhansinghrathore.in/images/og-card.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://rajvardhansinghrathore.in/validation/json-schema-validation">
+  <meta name="twitter:title" content="Carrier Webhook JSON Schema Validation (Draft-07 & 2020-12) | FreightIQ">
+  <meta name="twitter:description" content="Production-ready JSON Schema specifications for freight webhooks. Enforce mandatory keys, ISO-8601 timestamps, regex patterns, and numeric ranges.">
+  <meta name="twitter:image" content="https://rajvardhansinghrathore.in/images/og-card.png">
+
+  <!-- Typography & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://rajvardhansinghrathore.in/validation/json-schema-validation#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://rajvardhansinghrathore.in/validation/json-schema-validation"
+      },
+      "headline": "JSON Schema Validation for Carrier Webhooks (Draft-07 & 2020-12)",
+      "description": "Production-ready JSON Schema specifications for freight webhooks. Enforce mandatory keys, ISO-8601 timestamps, regex patterns, and numeric ranges.",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": "https://rajvardhansinghrathore.in/validation/json-schema-validation",
+      "datePublished": "2026-11-01T08:00:00+00:00",
+      "dateModified": "2026-11-11T12:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Rajvardhan Singh Rathore",
+        "jobTitle": "Logistics Data Architect",
+        "url": "https://rajvardhansinghrathore.in/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FreightIQ",
+        "url": "https://rajvardhansinghrathore.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rajvardhansinghrathore.in/images/logo.png"
+        }
+      },
+      "keywords": "JSON schema validation shipment"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rajvardhansinghrathore.in/validation/json-schema-validation#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rajvardhansinghrathore.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Validation",
+          "item": "https://rajvardhansinghrathore.in/json-schema-validation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "JSON Schema Validation for Carrier Webhooks (Draft-07 & 2020-12)",
+          "item": "https://rajvardhansinghrathore.in/validation/json-schema-validation"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  
+    <header class="site-header">
+      <div class="header-container">
+        <a href="/" class="brand-logo" aria-label="FreightIQ Homepage">
+          <div class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <span>Freight<span style="color: var(--accent-blue);">IQ</span></span>
+          <span class="brand-badge">PROD</span>
+        </a>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            
+        <li class="nav-item">
+          <a href="/data-quality" class="">Data Quality</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/shipment-data" class="">Shipment Data</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/validation" class=" active">Validation</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/troubleshooting" class="">Troubleshooting</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/tools" class="">Developer Tools</a>
+        </li>
+        
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="/tools" class="btn btn-secondary btn-sm">Developer Tools</a>
+          <a href="/data-quality" class="btn btn-primary btn-sm">Explore Hub</a>
+          <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+  
+  <main id="main-content">
+    
+    <div class="article-wrapper">
+      <!-- Left Navigation Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-heading">Validation Module Guides</div>
+        <ul class="sidebar-list">
+          <li><a href="/validation" class="">Data Validation Architecture for Freight Pipelines</a></li><li><a href="/validation/sql-techniques" class="">Advanced SQL Validation Techniques for Logistics Data</a></li><li><a href="/validation/null-validation-sql" class="">NULL Value Validation in SQL: Mandatory Freight Attributes</a></li><li><a href="/validation/duplicate-record-detection" class="">Duplicate Record Detection: SQL Window Functions & Hash Matching</a></li><li><a href="/validation/data-type-validation" class="">Data Type Enforcement & Schema Casting in Logistics ETL</a></li><li><a href="/validation/range-boundary-validation" class="">Range Boundary Validation: Tare, Weight, Dimensions & GPS</a></li><li><a href="/validation/json-schema-validation" class=" active">JSON Schema Validation for Carrier Webhooks (Draft-07 & 2020-12)</a></li><li><a href="/validation/api-validation" class="">Carrier API Ingestion Validation: Idempotency, Rate Limits & Payloads</a></li>
+        </ul>
+
+        <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); margin-top: 2rem;">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-blue); text-transform: uppercase;">Interactive Tool</div>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem;">Test SQL assertions live in the client-side sandbox.</p>
+          <a href="/tools/sql-playground" class="btn btn-primary btn-sm" style="width: 100%;">Launch Playground &rarr;</a>
+        </div>
+      </aside>
+
+      <!-- Center Main Content -->
+      <article class="article-main">
+        <header class="article-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="breadcrumbs-sep">/</span>
+            <a href="/validation">Validation</a>
+            <span class="breadcrumbs-sep">/</span>
+            <span style="color: var(--text-primary);">JSON Schema Validation for Carrier Webhooks (Draft-07 & 2020-12)</span>
+          </nav>
+
+          <h1 class="article-title">JSON Schema Validation for Carrier Webhooks (Draft-07 & 2020-12)</h1>
+          
+          <div class="article-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              12 min read
+            </span>
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Updated: November 2026
+            </span>
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              By Rajvardhan Singh Rathore
+            </span>
+          </div>
+
+          <div style="background: rgba(56, 189, 248, 0.05); border-left: 3px solid var(--accent-blue); padding: 1rem 1.25rem; border-radius: 4px; margin-top: 1.5rem; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+            Carrier webhooks are notoriously erratic. By enforcing strict JSON Schema validation at the API edge, pipelines catch malformed payloads, unexpected data types, and missing identifiers before they enter the data lake.
+          </div>
+        </header>
+
+        <div class="article-content">
+          
+<section id="draft07-vs-202012">
+  <h2>JSON Schema Standards: Draft-07 vs 2020-12</h2>
+  <p>While Draft-07 remains the most universally supported schema format across legacy enterprise API gateways, Draft 2020-12 introduces powerful dynamic anchoring and vocabulary modules. For public logistics webhook endpoints, Draft-07 provides maximum library compatibility.</p>
+</section>
+
+<section id="production-shipment-schema">
+  <h2>Production Carrier Webhook JSON Schema</h2>
+  <div class="code-block-wrapper">
+    <div class="code-header">
+      <span class="code-lang">JSON Schema (Draft-07)</span>
+      <button class="copy-btn">Copy Schema</button>
+    </div>
+    <pre><code>{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CarrierShipmentWebhook",
+  "type": "object",
+  "required": ["event_id", "carrier_code", "tracking_number", "shipment", "milestone"],
+  "additionalProperties": false,
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{8,64}$"
+    },
+    "carrier_code": {
+      "type": "string",
+      "enum": ["FDX", "UPS", "DHL", "MSK", "CMA", "USPS"]
+    },
+    "tracking_number": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 40
+    },
+    "shipment": {
+      "type": "object",
+      "required": ["master_id", "service_level", "gross_weight_kg"],
+      "properties": {
+        "master_id": { "type": "string" },
+        "service_level": { "type": "string" },
+        "gross_weight_kg": { "type": "number", "minimum": 0.01, "maximum": 50000.0 },
+        "pieces_count": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "milestone": {
+      "type": "object",
+      "required": ["status_code", "timestamp"],
+      "properties": {
+        "status_code": {
+          "type": "string",
+          "enum": ["ORDER_CREATED", "PICKED_UP", "IN_TRANSIT", "OUT_FOR_DELIVERY", "DELIVERED", "EXCEPTION", "FAILED_ATTEMPT"]
+        },
+        "timestamp": {
+          "type": "string",
+          "pattern": "^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$"
+        }
+      }
+    }
+  }
+}</code></pre>
+  </div>
+</section>
+
+<section id="edge-validation-implementation">
+  <h2>Python & Node.js Edge Validation Code</h2>
+  <p>In Python, compile the schema with <code>fastjsonschema</code> or <code>jsonschema</code> for high-throughput sub-millisecond execution:</p>
+  <div class="code-block-wrapper">
+    <div class="code-header">
+      <span class="code-lang">Python FastJSONSchema</span>
+      <button class="copy-btn">Copy Code</button>
+    </div>
+    <pre><code>import fastjsonschema
+
+validate = fastjsonschema.compile(carrier_schema_dict)
+
+def process_webhook(payload: dict):
+    try:
+        valid_data = validate(payload)
+        return {"status": "accepted", "code": 200}
+    except fastjsonschema.JsonSchemaException as e:
+        return {"status": "rejected", "error": e.message, "path": e.path, "code": 400}</code></pre>
+  </div>
+</section>
+
+<section id="testing-live-payloads">
+  <h2>Interactive Validation in Browser</h2>
+  <p>Paste your carrier webhook payloads directly into our <a href="/tools/json-validator">JSON Shipment Schema Validator Tool</a> to test schema compliance in real time.</p>
+</section>
+        
+        </div>
+
+        <!-- Cross-Module Contextual Linking -->
+        <section class="related-section">
+          <h3>Related Engineering Guides</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Continue exploring related data architecture principles across other modules:</p>
+          <div class="related-grid">
+            
+        <a href="/data-quality" class="related-card">
+          <div class="related-category">Data Quality</div>
+          <div class="related-title">Logistics Data Quality Framework & Architecture</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">12 min read &bull; data quality dimensions in ETL</p>
+        </a>
+        
+        <a href="/data-quality/dimensions" class="related-card">
+          <div class="related-category">Data Quality</div>
+          <div class="related-title">The 6 Dimensions of Freight Data Quality</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">10 min read &bull; freight data quality dimensions</p>
+        </a>
+        
+        <a href="/data-quality/completeness" class="related-card">
+          <div class="related-category">Data Quality</div>
+          <div class="related-title">Shipment Data Completeness: Detecting Missing Attributes</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">9 min read &bull; shipment data completeness validation</p>
+        </a>
+        
+          </div>
+        </section>
+
+        <!-- Author Card -->
+        <div style="display: flex; gap: 1.5rem; align-items: center; margin-top: 4rem; padding: 1.75rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan)); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; color: #070B14; flex-shrink: 0;">
+            RR
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">Rajvardhan Singh Rathore</div>
+            <div style="font-size: 0.85rem; color: var(--accent-blue); margin-bottom: 0.4rem;">Logistics Data Architect</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Logistics data engineer and solutions architect specializing in high-throughput freight data pipelines, EDI 214 integration, and supply chain telemetry validation.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right Table of Contents -->
+      <aside class="article-toc">
+        <div class="toc-title">On This Page</div>
+        <ul class="toc-list">
+          <li class="toc-item"><a href="#draft07-vs-202012" class="toc-link">JSON Schema Standards: Draft-07 vs 2020-12</a></li><li class="toc-item"><a href="#production-shipment-schema" class="toc-link">Production Carrier Webhook JSON Schema</a></li><li class="toc-item"><a href="#edge-validation-implementation" class="toc-link">Python & Node.js Edge Validation Code</a></li><li class="toc-item"><a href="#testing-live-payloads" class="toc-link">Interactive Validation in Browser</a></li>
+        </ul>
+      </aside>
+    </div>
+    
+  </main>
+
+  
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="/" class="brand-logo">
+              <div class="brand-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <span>Freight<span style="color: var(--accent-blue);">IQ</span></span>
+            </a>
+            <p>The Engineering Behind Logistics Data.</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+              An engineering-grade knowledge platform and developer suite built for logistics data engineers, supply chain architects, and ETL developers.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 1: Data Quality</h4>
+            <ul class="footer-links">
+              <li><a href="/data-quality">Data Quality Hub</a></li>
+              <li><a href="/data-quality/dimensions">6 Core Dimensions</a></li>
+              <li><a href="/data-quality/completeness">Data Completeness</a></li>
+              <li><a href="/data-quality/accuracy">Data Accuracy</a></li>
+              <li><a href="/data-quality/consistency">Data Consistency</a></li>
+              <li><a href="/data-quality/timeliness">Data Timeliness</a></li>
+              <li><a href="/data-quality/uniqueness">Data Uniqueness</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 2: Shipment Data</h4>
+            <ul class="footer-links">
+              <li><a href="/shipment-data">Shipment Data Hub</a></li>
+              <li><a href="/shipment-data/lifecycle">Shipment Lifecycle</a></li>
+              <li><a href="/shipment-data/shipment-ids">Master Shipment IDs</a></li>
+              <li><a href="/shipment-data/tracking-numbers">Carrier Tracking Formats</a></li>
+              <li><a href="/shipment-data/status-events">Status Events & EDI 214</a></li>
+              <li><a href="/shipment-data/delivery-dates">Delivery Dates & EDD</a></li>
+              <li><a href="/shipment-data/location-data">Geospatial PostGIS Data</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 3: Validation</h4>
+            <ul class="footer-links">
+              <li><a href="/validation">Validation Hub</a></li>
+              <li><a href="/validation/sql-techniques">SQL Validation Techniques</a></li>
+              <li><a href="/validation/null-validation-sql">NULL Auditing in SQL</a></li>
+              <li><a href="/validation/duplicate-record-detection">Duplicate Detection</a></li>
+              <li><a href="/validation/data-type-validation">Data Type Enforcement</a></li>
+              <li><a href="/validation/range-boundary-validation">Range Boundary Checks</a></li>
+              <li><a href="/validation/json-schema-validation">JSON Schema Webhooks</a></li>
+              <li><a href="/validation/api-validation">Carrier API Validation</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 4: Troubleshooting</h4>
+            <ul class="footer-links">
+              <li><a href="/troubleshooting">Troubleshooting Hub</a></li>
+              <li><a href="/troubleshooting/pipeline-quality">Pipeline Quality & SLOs</a></li>
+              <li><a href="/troubleshooting/etl-validation">ETL Reconciliation</a></li>
+              <li><a href="/troubleshooting/real-time-monitoring">Real-Time Monitoring</a></li>
+              <li><a href="/troubleshooting/automated-testing">Automated Pipeline Tests</a></li>
+              <li><a href="/troubleshooting/pipeline-data-mismatches">Data Mismatch Triage</a></li>
+              <li><a href="/troubleshooting/sql-errors">SQL Warehouse Errors</a></li>
+              <li><a href="/troubleshooting/api-errors">Carrier API Failures</a></li>
+              <li><a href="/troubleshooting/database-constraint-errors">Constraint Violations</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 FreightIQ. Built by <a href="/about">Rajvardhan Singh Rathore</a>. All rights reserved.
+          </div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="/tools">Developer Tools</a>
+            <a href="/about">About & Architecture</a>
+            <a href="/sitemap.xml">XML Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+  <script src="/scripts/tools.js"></script>
+</body>
+</html>

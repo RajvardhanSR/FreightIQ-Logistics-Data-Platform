@@ -1,0 +1,28 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#070B14"/>
+  <circle cx="600" cy="0" r="500" fill="#38BDF8" fill-opacity="0.08"/>
+  <circle cx="1100" cy="300" r="400" fill="#6366F1" fill-opacity="0.05"/>
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="#0D1424" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2"/>
+  
+  <!-- Logo -->
+  <rect x="140" y="140" width="64" height="64" rx="16" fill="url(#brand_grad)"/>
+  <path d="M172 152V192M182 158H166C162.686 158 160 160.686 160 164C160 167.314 162.686 170 166 170H176C179.314 170 182 172.686 182 176C182 179.314 179.314 182 176 182H160" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <text x="224" y="185" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="36" font-weight="800" letter-spacing="-1">Freight<tspan fill="#38BDF8">IQ</tspan></text>
+  <text x="140" y="280" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="56" font-weight="800" letter-spacing="-1.5">The Engineering Behind</text>
+  <text x="140" y="350" fill="url(#text_grad)" font-family="Inter, sans-serif" font-size="56" font-weight="800" letter-spacing="-1.5">Logistics Data.</text>
+  
+  <text x="140" y="420" fill="#94A3B8" font-family="Inter, sans-serif" font-size="22">A 32-Guide Technical Knowledge Platform &amp; Developer Suite</text>
+  <text x="140" y="490" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="18" font-weight="600">https://rajvardhansinghrathore.in</text>
+
+  <defs>
+    <linearGradient id="brand_grad" x1="140" y1="140" x2="204" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="text_grad" x1="140" y1="300" x2="600" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+</svg>

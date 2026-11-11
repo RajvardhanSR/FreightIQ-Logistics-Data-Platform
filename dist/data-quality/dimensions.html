@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 6 Dimensions of Freight Data Quality Explained | FreightIQ</title>
+  <meta name="description" content="Explore the six dimensions of data quality applied specifically to supply chain and freight logistics: Completeness, Accuracy, Consistency, Timeliness, Uniqueness, Validity.">
+  <link rel="canonical" href="https://rajvardhansinghrathore.in/data-quality/dimensions">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://rajvardhansinghrathore.in/data-quality/dimensions">
+  <meta property="og:title" content="The 6 Dimensions of Freight Data Quality Explained | FreightIQ">
+  <meta property="og:description" content="Explore the six dimensions of data quality applied specifically to supply chain and freight logistics: Completeness, Accuracy, Consistency, Timeliness, Uniqueness, Validity.">
+  <meta property="og:site_name" content="FreightIQ">
+  <meta property="og:image" content="https://rajvardhansinghrathore.in/images/og-card.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://rajvardhansinghrathore.in/data-quality/dimensions">
+  <meta name="twitter:title" content="The 6 Dimensions of Freight Data Quality Explained | FreightIQ">
+  <meta name="twitter:description" content="Explore the six dimensions of data quality applied specifically to supply chain and freight logistics: Completeness, Accuracy, Consistency, Timeliness, Uniqueness, Validity.">
+  <meta name="twitter:image" content="https://rajvardhansinghrathore.in/images/og-card.png">
+
+  <!-- Typography & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://rajvardhansinghrathore.in/data-quality/dimensions#article",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://rajvardhansinghrathore.in/data-quality/dimensions"
+      },
+      "headline": "The 6 Dimensions of Freight Data Quality",
+      "description": "Explore the six dimensions of data quality applied specifically to supply chain and freight logistics: Completeness, Accuracy, Consistency, Timeliness, Uniqueness, Validity.",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": "https://rajvardhansinghrathore.in/data-quality/dimensions",
+      "datePublished": "2026-11-01T08:00:00+00:00",
+      "dateModified": "2026-11-11T12:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Rajvardhan Singh Rathore",
+        "jobTitle": "Logistics Data Architect",
+        "url": "https://rajvardhansinghrathore.in/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FreightIQ",
+        "url": "https://rajvardhansinghrathore.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rajvardhansinghrathore.in/images/logo.png"
+        }
+      },
+      "keywords": "freight data quality dimensions"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rajvardhansinghrathore.in/data-quality/dimensions#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rajvardhansinghrathore.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data Quality",
+          "item": "https://rajvardhansinghrathore.in/dimensions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The 6 Dimensions of Freight Data Quality",
+          "item": "https://rajvardhansinghrathore.in/data-quality/dimensions"
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+  
+    <header class="site-header">
+      <div class="header-container">
+        <a href="/" class="brand-logo" aria-label="FreightIQ Homepage">
+          <div class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <span>Freight<span style="color: var(--accent-blue);">IQ</span></span>
+          <span class="brand-badge">PROD</span>
+        </a>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            
+        <li class="nav-item">
+          <a href="/data-quality" class=" active">Data Quality</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/shipment-data" class="">Shipment Data</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/validation" class="">Validation</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/troubleshooting" class="">Troubleshooting</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/tools" class="">Developer Tools</a>
+        </li>
+        
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="/tools" class="btn btn-secondary btn-sm">Developer Tools</a>
+          <a href="/data-quality" class="btn btn-primary btn-sm">Explore Hub</a>
+          <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+  
+  <main id="main-content">
+    
+    <div class="article-wrapper">
+      <!-- Left Navigation Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-heading">Data Quality Module Guides</div>
+        <ul class="sidebar-list">
+          <li><a href="/data-quality" class="">Logistics Data Quality Framework & Architecture</a></li><li><a href="/data-quality/dimensions" class=" active">The 6 Dimensions of Freight Data Quality</a></li><li><a href="/data-quality/completeness" class="">Shipment Data Completeness: Detecting Missing Attributes</a></li><li><a href="/data-quality/accuracy" class="">Logistics Data Accuracy & Cross-System Verification</a></li><li><a href="/data-quality/consistency" class="">Cross-Carrier Status Code Normalization & Consistency</a></li><li><a href="/data-quality/timeliness" class="">Event Latency, SLA Tracking & Shipment Data Timeliness</a></li><li><a href="/data-quality/uniqueness" class="">Deduplication Strategies for High-Velocity Freight Webhooks</a></li>
+        </ul>
+
+        <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); margin-top: 2rem;">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-blue); text-transform: uppercase;">Interactive Tool</div>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0 1rem;">Test SQL assertions live in the client-side sandbox.</p>
+          <a href="/tools/sql-playground" class="btn btn-primary btn-sm" style="width: 100%;">Launch Playground &rarr;</a>
+        </div>
+      </aside>
+
+      <!-- Center Main Content -->
+      <article class="article-main">
+        <header class="article-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="breadcrumbs-sep">/</span>
+            <a href="/data-quality">Data Quality</a>
+            <span class="breadcrumbs-sep">/</span>
+            <span style="color: var(--text-primary);">The 6 Dimensions of Freight Data Quality</span>
+          </nav>
+
+          <h1 class="article-title">The 6 Dimensions of Freight Data Quality</h1>
+          
+          <div class="article-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              10 min read
+            </span>
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Updated: November 2026
+            </span>
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              By Rajvardhan Singh Rathore
+            </span>
+          </div>
+
+          <div style="background: rgba(56, 189, 248, 0.05); border-left: 3px solid var(--accent-blue); padding: 1rem 1.25rem; border-radius: 4px; margin-top: 1.5rem; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+            While general data quality frameworks define six abstract dimensions, logistics systems require concrete mathematical formulas and physical boundary rules. This guide operationalizes each dimension for transportation data pipelines.
+          </div>
+        </header>
+
+        <div class="article-content">
+          
+<section id="dimensions-matrix">
+  <h2>Logistics Data Quality Dimensions Matrix</h2>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Freight Definition</th>
+          <th>Failure Example</th>
+          <th>Target SLA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Completeness</strong></td>
+          <td>Availability of all required shipment manifest fields</td>
+          <td>Missing consignee postal code or carrier SCAC</td>
+          <td>&gt; 99.8%</td>
+        </tr>
+        <tr>
+          <td><strong>Accuracy</strong></td>
+          <td>Degree to which digital record matches physical truth</td>
+          <td>Recorded weight 150 kg, actual scale ticket 1500 kg</td>
+          <td>&gt; 99.5%</td>
+        </tr>
+        <tr>
+          <td><strong>Consistency</strong></td>
+          <td>Harmony across multimodal status records and ERPs</td>
+          <td>WMS says 'SHIPPED' but Carrier API returns 'UNKNOWN'</td>
+          <td>&gt; 99.0%</td>
+        </tr>
+        <tr>
+          <td><strong>Timeliness</strong></td>
+          <td>Time elapsed between physical event and digital ingestion</td>
+          <td>Delivery milestone ingested 36 hours post-handover</td>
+          <td>&lt; 15 min lag</td>
+        </tr>
+        <tr>
+          <td><strong>Uniqueness</strong></td>
+          <td>Absence of duplicate event or billing entries</td>
+          <td>Carrier webhook retries causing duplicate PU scans</td>
+          <td>100.0%</td>
+        </tr>
+        <tr>
+          <td><strong>Validity</strong></td>
+          <td>Adherence to domain schemas, enums and regex standards</td>
+          <td>Invalid ISO-8601 date '11/12/2026 2pm'</td>
+          <td>&gt; 99.9%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="dimension-completeness">
+  <h2>1. Completeness</h2>
+  <p>In freight ETL pipelines, completeness is measured as a field-level and record-level ratio:</p>
+  <p>$$	ext{Completeness Rate} = rac{\sum_{i=1}^{N} 	ext{Non-Null Mandatory Attributes}}{N 	imes 	ext{Total Required Attributes}} 	imes 100$$</p>
+  <p>Mandatory freight keys include <code>master_shipment_id</code>, <code>carrier_code</code>, <code>service_tier</code>, <code>origin_location_code</code>, and <code>destination_location_code</code>.</p>
+</section>
+
+<section id="dimension-accuracy">
+  <h2>2. Accuracy</h2>
+  <p>Accuracy verifies digital claims against physical ground truth. For example, geofencing coordinates from trailer GPS pings must fall within the polygon radius of the specified logistics terminal:</p>
+  <div class="code-block-wrapper">
+    <div class="code-header">
+      <span class="code-lang">PostGIS SQL</span>
+      <button class="copy-btn">Copy SQL</button>
+    </div>
+    <pre><code>-- Assert event GPS is within 500 meters of reported terminal hub
+SELECT 
+  e.event_id,
+  e.shipment_id,
+  ST_Distance(
+    ST_SetSRID(ST_MakePoint(e.longitude, e.latitude), 4326)::geography,
+    h.geofence_center::geography
+  ) AS distance_meters
+FROM stg_tracking_events e
+JOIN dim_logistics_hubs h ON e.reported_hub_code = h.hub_code
+WHERE ST_Distance(
+  ST_SetSRID(ST_MakePoint(e.longitude, e.latitude), 4326)::geography,
+  h.geofence_center::geography
+) > 500;</code></pre>
+  </div>
+</section>
+
+<section id="dimension-consistency">
+  <h2>3. Consistency</h2>
+  <p>Ensures that multiple reporting systems tell the same story. In intermodal freight (rail + truck + ocean), state machines must progress monotonically without conflicting terminal statuses.</p>
+</section>
+
+<section id="dimension-timeliness">
+  <h2>4. Timeliness</h2>
+  <p>Calculates the ingestion latency quantile ($p_{95}, p_{99}$):</p>
+  <p>$$	ext{Latency} = t_{	ext{ingested\_at}} - t_{	ext{event\_occurred\_at}}$$</p>
+  <p>Late-arriving facts corrupt dynamic routing algorithms and trigger erroneous customer SLA breach penalties.</p>
+</section>
+
+<section id="dimension-uniqueness">
+  <h2>5. Uniqueness</h2>
+  <p>Guarantees idempotency. Carrier HTTP webhook retries must never generate duplicate billing entries or double-counted delivery events in the enterprise data warehouse.</p>
+</section>
+
+<section id="dimension-validity">
+  <h2>6. Validity</h2>
+  <p>Strict schema syntax adherence: tracking numbers must pass standard carrier checksum algorithms (such as UPS Modulo-10 or ISO 6346 container check digits), and timestamps must follow ISO-8601 UTC format.</p>
+</section>
+
+<section id="composite-dqs">
+  <h2>Computing the Composite Data Quality Score (DQS)</h2>
+  <p>Enterprise logistics platforms combine the 6 dimensions into a weighted score:</p>
+  <p>$$	ext{DQS} = 0.25 C_{	ext{comp}} + 0.25 A_{	ext{acc}} + 0.15 K_{	ext{cons}} + 0.15 T_{	ext{time}} + 0.10 U_{	ext{uniq}} + 0.10 V_{	ext{valid}}$$</p>
+  <p>Explore our interactive <a href="/tools/quality-explorer">Data Quality Explorer Tool</a> to simulate variations in these parameters.</p>
+</section>
+        
+        </div>
+
+        <!-- Cross-Module Contextual Linking -->
+        <section class="related-section">
+          <h3>Related Engineering Guides</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Continue exploring related data architecture principles across other modules:</p>
+          <div class="related-grid">
+            
+        <a href="/shipment-data" class="related-card">
+          <div class="related-category">Shipment Data</div>
+          <div class="related-title">Shipment Data Architecture: Entities, Relational Models & Schemas</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">14 min read &bull; shipment tracking data schema</p>
+        </a>
+        
+        <a href="/shipment-data/lifecycle" class="related-card">
+          <div class="related-category">Shipment Data</div>
+          <div class="related-title">The Multimodal Shipment Lifecycle & State Machine</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">12 min read &bull; shipment lifecycle state machine</p>
+        </a>
+        
+        <a href="/shipment-data/shipment-ids" class="related-card">
+          <div class="related-category">Shipment Data</div>
+          <div class="related-title">Master Shipment Identifiers: UUIDv7 vs ULID vs Composite Keys</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">10 min read &bull; master shipment identifier design</p>
+        </a>
+        
+          </div>
+        </section>
+
+        <!-- Author Card -->
+        <div style="display: flex; gap: 1.5rem; align-items: center; margin-top: 4rem; padding: 1.75rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan)); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; color: #070B14; flex-shrink: 0;">
+            RR
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">Rajvardhan Singh Rathore</div>
+            <div style="font-size: 0.85rem; color: var(--accent-blue); margin-bottom: 0.4rem;">Logistics Data Architect</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Logistics data engineer and solutions architect specializing in high-throughput freight data pipelines, EDI 214 integration, and supply chain telemetry validation.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right Table of Contents -->
+      <aside class="article-toc">
+        <div class="toc-title">On This Page</div>
+        <ul class="toc-list">
+          <li class="toc-item"><a href="#dimensions-matrix" class="toc-link">Logistics Data Quality Dimensions Matrix</a></li><li class="toc-item"><a href="#dimension-completeness" class="toc-link">1. Completeness</a></li><li class="toc-item"><a href="#dimension-accuracy" class="toc-link">2. Accuracy</a></li><li class="toc-item"><a href="#dimension-consistency" class="toc-link">3. Consistency</a></li><li class="toc-item"><a href="#dimension-timeliness" class="toc-link">4. Timeliness</a></li><li class="toc-item"><a href="#dimension-uniqueness" class="toc-link">5. Uniqueness</a></li><li class="toc-item"><a href="#dimension-validity" class="toc-link">6. Validity</a></li><li class="toc-item"><a href="#composite-dqs" class="toc-link">Computing the Composite Data Quality Score (DQS)</a></li>
+        </ul>
+      </aside>
+    </div>
+    
+  </main>
+
+  
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="/" class="brand-logo">
+              <div class="brand-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <span>Freight<span style="color: var(--accent-blue);">IQ</span></span>
+            </a>
+            <p>The Engineering Behind Logistics Data.</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+              An engineering-grade knowledge platform and developer suite built for logistics data engineers, supply chain architects, and ETL developers.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 1: Data Quality</h4>
+            <ul class="footer-links">
+              <li><a href="/data-quality">Data Quality Hub</a></li>
+              <li><a href="/data-quality/dimensions">6 Core Dimensions</a></li>
+              <li><a href="/data-quality/completeness">Data Completeness</a></li>
+              <li><a href="/data-quality/accuracy">Data Accuracy</a></li>
+              <li><a href="/data-quality/consistency">Data Consistency</a></li>
+              <li><a href="/data-quality/timeliness">Data Timeliness</a></li>
+              <li><a href="/data-quality/uniqueness">Data Uniqueness</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 2: Shipment Data</h4>
+            <ul class="footer-links">
+              <li><a href="/shipment-data">Shipment Data Hub</a></li>
+              <li><a href="/shipment-data/lifecycle">Shipment Lifecycle</a></li>
+              <li><a href="/shipment-data/shipment-ids">Master Shipment IDs</a></li>
+              <li><a href="/shipment-data/tracking-numbers">Carrier Tracking Formats</a></li>
+              <li><a href="/shipment-data/status-events">Status Events & EDI 214</a></li>
+              <li><a href="/shipment-data/delivery-dates">Delivery Dates & EDD</a></li>
+              <li><a href="/shipment-data/location-data">Geospatial PostGIS Data</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 3: Validation</h4>
+            <ul class="footer-links">
+              <li><a href="/validation">Validation Hub</a></li>
+              <li><a href="/validation/sql-techniques">SQL Validation Techniques</a></li>
+              <li><a href="/validation/null-validation-sql">NULL Auditing in SQL</a></li>
+              <li><a href="/validation/duplicate-record-detection">Duplicate Detection</a></li>
+              <li><a href="/validation/data-type-validation">Data Type Enforcement</a></li>
+              <li><a href="/validation/range-boundary-validation">Range Boundary Checks</a></li>
+              <li><a href="/validation/json-schema-validation">JSON Schema Webhooks</a></li>
+              <li><a href="/validation/api-validation">Carrier API Validation</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Module 4: Troubleshooting</h4>
+            <ul class="footer-links">
+              <li><a href="/troubleshooting">Troubleshooting Hub</a></li>
+              <li><a href="/troubleshooting/pipeline-quality">Pipeline Quality & SLOs</a></li>
+              <li><a href="/troubleshooting/etl-validation">ETL Reconciliation</a></li>
+              <li><a href="/troubleshooting/real-time-monitoring">Real-Time Monitoring</a></li>
+              <li><a href="/troubleshooting/automated-testing">Automated Pipeline Tests</a></li>
+              <li><a href="/troubleshooting/pipeline-data-mismatches">Data Mismatch Triage</a></li>
+              <li><a href="/troubleshooting/sql-errors">SQL Warehouse Errors</a></li>
+              <li><a href="/troubleshooting/api-errors">Carrier API Failures</a></li>
+              <li><a href="/troubleshooting/database-constraint-errors">Constraint Violations</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 FreightIQ. Built by <a href="/about">Rajvardhan Singh Rathore</a>. All rights reserved.
+          </div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="/tools">Developer Tools</a>
+            <a href="/about">About & Architecture</a>
+            <a href="/sitemap.xml">XML Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+  <script src="/scripts/tools.js"></script>
+</body>
+</html>
