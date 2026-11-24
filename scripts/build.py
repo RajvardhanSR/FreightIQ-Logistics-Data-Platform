@@ -169,6 +169,15 @@ def wrap_page(title, meta_title, meta_desc, canonical_url, content_html, structu
   <meta name="description" content="{meta_desc}">
   <link rel="canonical" href="{canonical_url}">
   
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E774PRL6K7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-E774PRL6K7');
+  </script>
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="{canonical_url}">
